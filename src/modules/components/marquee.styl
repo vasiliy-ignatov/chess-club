@@ -1,0 +1,42 @@
+.marquee
+	position: relative;
+	width 100vw
+	height 38px
+	max-width 100%
+	font-size 16px
+	line-height 16px
+	color $white
+	text-transform uppercase
+	background-color #F54932
+	overflow-x hidden
+	&__wrapper
+		
+		padding 10px 0
+		position absolute
+		white-space nowrap
+		will-change transform
+		animation marquee 32s linear infinite
+	&__item
+		position relative
+		display inline-block
+		padding-right 30px
+		&::after
+			content ''
+			position absolute
+			width 6px
+			height 6px
+			border-radius 50%
+			right 12px
+			top 50%
+			transform translateY(-50%)
+			background-color $white
+
+
+@keyframes marquee {
+	from {
+		transform translateX(0)
+	}
+	to {
+		transform translateX(-50%)
+	}
+}

@@ -1,8 +1,142 @@
 extends ./tpl/layout
 
 block page
-	.container
-		h1 hello world
-		h2 hello world
-		h3 hello world
+	section.section.section--intro
+		.container
+			h1.title Превратите уездный город
+				span в столицу <br> земного шара
+			p Оплатите взнос на&nbsp;телеграммы для организации Международного васюкинского турнира по&nbsp;шахматам
+
+			a(href="#").button.button--black Поддержать шахматную мысль
+			a(href="#").button Подробнее о турнире
+	section.section
+		.marquee
+			.marquee__wrapper
+				.marquee__item Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих!
+				.marquee__item Шахматы двигают вперед не&nbsp;только культуру, но&nbsp;и&nbsp;экономику!
+				.marquee__item Лед тронулся, господа присяжные заседатели!
+				.marquee__item Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих!
+				.marquee__item Шахматы двигают вперед не&nbsp;только культуру, но&nbsp;и&nbsp;экономику!
+				.marquee__item Лед тронулся, господа присяжные заседатели!
+	section.section
+		.container
+			.page-anounce
+				.page-anounce__info
+					.page-subtitle
+						| Чтобы поддержать Международный васюкинский турнир посетите лекцию на&nbsp;тему:
+						a(href="") &laquo;Плодотворная дебютная идея&raquo;
+				.page-anounce__image
+					img.image(src="./img/gross-01.png")
+			.page-games
+				.page-games__image
+					img.image(src="./img/gross-02.png")
+				.page-games__info
+					.page-subtitle
+						| и&nbsp;Сеанс одновременной игры в&nbsp;шахматы на&nbsp;160 досках гроссмейстера О.&nbsp;Бендера
+					.page-games__table
+						.table
+							.tr
+								.td Место проведения:
+								.td Клуб &laquo;Картонажник&raquo;
+							.tr
+								.td Дата и&nbsp;время мероприятия:
+								.td 22&nbsp;июня 1927&nbsp;г.&nbsp;в&nbsp;18:00
+							.tr
+								.td Стоимость входных билетов:
+								.td 22&nbsp;июня 1927&nbsp;г.&nbsp;в&nbsp;18:00
+							.tr
+								.td Плата за&nbsp;игру:
+								.td 50&nbsp;коп.
+							.tr
+								.td Взнос на телеграммы:
+								.td 
+									span.crossed-out 100&nbsp;руб. 
+									span 21&nbsp;руб.&nbsp;16&nbsp;коп.
+	section.section
+		.container
+			h2.title Этапы преображения Васюков
+			-
+				var list = [
+					{
+						number: '1',
+						text: 'Строительство железнодорожной магистрали Москва-Васюки'
+					},
+					{
+						number: '2',
+						text: 'Открытие фешенебельной гостиницы &laquo;Проходная пешка&raquo; и&nbsp;других небоскрёбов'
+					},
+					{
+						number: '3',
+						text: 'Поднятие сельского хозяйства в&nbsp;радиусе на&nbsp;тысячу километров: производство овощей, фруктов, икры, шоколадных конфет'
+					},
+					{
+						number: '4',
+						text: 'Строительство дворца для турнира'
+					},
+					{
+						number: '5',
+						text: 'Размещение гаражей для гостевого автотранспорта'
+					},
+					{
+						number: '6',
+						text: 'Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов'
+					},
+					{
+						number: '7',
+						text: 'Создание аэропорта &laquo;Большие Васюки&raquo; с&nbsp;регулярным отправлением почтовых самолётов и&nbsp;дирижаблей во&nbsp;все концы света, включая Лос-Анжелос и&nbsp;Мельбурн'
+					},
+				]
+			.main-list
+				each item, i in list
+					.main-list-item
+						.main-list-item__number !{item.number}
+						.main-list-item__text !{item.text}
+	section.section
+		.container
+			h3.title Участники турнира
+			-
+				var list2 = [
+					{
+						name: 'Хозе-Рауль Капабланка',
+						title: 'Чемпион мира по шахматам'
+					},
+					{
+						name: 'Эммануил Ласкер',
+						title: 'Чемпион мира по шахматам'
+					},
+					{
+						name: 'Александр Алехин',
+						title: 'Чемпион мира по шахматам'
+					},
+					{
+						name: 'Арон Нимцович',
+						title: 'Чемпион мира по шахматам'
+					},
+					{
+						name: 'Рихард Рети',
+						title: 'Чемпион мира по шахматам'
+					},
+					{
+						name: 'Остап Бендер',
+						title: 'Гроссмейстер'
+					}
+				];
+			.pl
+				each item, i in list2
+					.pl-item
+						.pl-item__photo
+						.pl-item__name !{item.name}
+						.pl-item__title !{item.title}
+						a.pl-item__link(href="#") Подробнее
+
+	section.section
+		.marquee
+			.marquee__wrapper
+				.marquee__item Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих!
+				.marquee__item Шахматы двигают вперед не&nbsp;только культуру, но&nbsp;и&nbsp;экономику!
+				.marquee__item Лед тронулся, господа присяжные заседатели!
+				.marquee__item Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих!
+				.marquee__item Шахматы двигают вперед не&nbsp;только культуру, но&nbsp;и&nbsp;экономику!
+				.marquee__item Лед тронулся, господа присяжные заседатели!
+
 

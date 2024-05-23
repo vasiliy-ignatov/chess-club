@@ -1,11 +1,105 @@
 @font-face {
-  font-family: 'open-sans';
-  src: url("../fonts/OpenSans.woff2") format('woff2'), url("../fonts/OpenSans.woff") format('woff');
+  font-family: 'Inter';
+  src: url("../fonts/Inter-Regular.woff2") format('woff2'), url("../fonts/Inter-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Molot';
+  src: url("../fonts/Molot.woff2") format('woff2'), url("../fonts/Molot.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Theater';
+  src: url("../fonts/Theater.woff2") format('woff2'), url("../fonts/Theater.woff") format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 h1 {
-  color: #008000;
-  font-family: 'open-sans', Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.container {
+  padding: 0 20px;
+}
+.pl-item__photo {
+  width: 244px;
+  height: 244px;
+  background-color: #f00;
+  border-radius: 50%;
+}
+.footer {
+  padding: 40px 0 60px;
+  background-color: #e9ded4;
+  color: #313131;
+}
+.marquee {
+  position: relative;
+  width: 100vw;
+  height: 38px;
+  max-width: 100%;
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #f54932;
+  overflow-x: hidden;
+}
+.marquee__wrapper {
+  padding: 10px 0;
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 32s linear infinite;
+}
+.marquee__item {
+  position: relative;
+  display: inline-block;
+  padding-right: 30px;
+}
+.marquee__item::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+}
+@-moz-keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@-webkit-keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@-o-keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
