@@ -86,11 +86,12 @@ block page
 						text: 'Создание аэропорта &laquo;Большие Васюки&raquo; с&nbsp;регулярным отправлением почтовых самолётов и&nbsp;дирижаблей во&nbsp;все концы света, включая Лос-Анжелос и&nbsp;Мельбурн'
 					},
 				]
-			.main-list
-				each item, i in list
-					.main-list-item
-						.main-list-item__number !{item.number}
-						.main-list-item__text !{item.text}
+			.main-list.swiper
+				.swiper-wrapper
+					each item, i in list
+						.main-list-item.swiper-slide
+							.main-list-item__number !{item.number}
+							.main-list-item__text !{item.text}
 	section.section
 		.container
 			h3.title Участники турнира
@@ -121,13 +122,14 @@ block page
 						title: 'Гроссмейстер'
 					}
 				];
-			.pl
-				each item, i in list2
-					.pl-item
-						.pl-item__photo
-						.pl-item__name !{item.name}
-						.pl-item__title !{item.title}
-						a.pl-item__link(href="#") Подробнее
+			.pl.swiper
+				.swiper-wrapper
+					each item, i in list2
+						.pl-item.swiper-slide
+							.pl-item__photo
+							.pl-item__name !{item.name}
+							.pl-item__title !{item.title}
+							a.pl-item__link(href="#") Подробнее
 
 	section.section
 		.marquee
